@@ -19,10 +19,8 @@
       "onAutoForward": "openPreview"
     }
   },
-  "postCreateCommand": {
-    "install":"npm install",
-    "setup":"bash _helpers/setup.sh"
-  },
+  "updateContentCommand": "npm install",
+  "postCreateCommand": "bash _helpers/setup.sh",
   "customizations": {
     "vscode": {
       "extensions": [
