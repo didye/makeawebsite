@@ -5,7 +5,10 @@
   "image": "mcr.microsoft.com/devcontainers/base:noble",
   "features": {
     "ghcr.io/devcontainers/features/node:1": {},
-    "ghcr.io/devcontainers/features/github-cli:1": {}
+    "ghcr.io/devcontainers/features/github-cli:1": {
+      "version": "latest",
+      "extensions": "github/gh-copilot"
+    }
   },
   "portsAttributes": {
     "3000-9000": {
@@ -13,17 +16,15 @@
       "onAutoForward": "openPreview"
     }
   },
-  "updateContentCommand": "npm install",
-  "postAttachCommand": {
-    "guide": "bash _helpers/welcome.sh",
-    "start": "npm run start || npx --yes serve"
-  },
+  "updateContentCommand": "bash _helpers/setup.sh",
   "waitFor": "updateContentCommand",
   "customizations": {
     "vscode": {
       "extensions": [
         "jkearins.action-buttons-ext@0.1.1",
-        "dbaeumer.vscode-eslint"
+        "dbaeumer.vscode-eslint",
+        "github.copilot",
+        "github.copilot-chat"
       ],
       "settings": {
         "files.exclude": {
@@ -42,49 +43,22 @@
               "tooltip": "Tidy up your code"
             },
             {
-              "name": "🪗 Wrap",
-              "singleInstance": true,
-              "useVsCodeApi": true,
-              "command": "editor.action.toggleWordWrap",
-              "tooltip": "Toggle word wrap"
-            },
-            {
-              "name": "💻 Terminal",
-              "singleInstance": true,
-              "useVsCodeApi": true,
-              "command": "workbench.action.terminal.toggleTerminal",
-              "tooltip": "Open a terminal"
-            },
-            {
-              "name": "🔎 Split",
-              "singleInstance": true,
-              "useVsCodeApi": true,
-              "command": "workbench.action.moveEditorToNextGroup",
-              "tooltip": "Move your active tab to the side"
-            },
-            {
-              "name": "🎡 Run",
-              "singleInstance": true,
-              "command": "bash _helpers/run.sh",
-              "tooltip": "Build and run your site"
-            },
-            {
               "name": "🔗 Share",
               "singleInstance": true,
               "command": "bash _helpers/share.sh",
               "tooltip": "Grab a link to share your draft site"
             },
             {
-              "name": "🚧 Build",
-              "singleInstance": true,
-              "command": "bash _helpers/build.sh",
-              "tooltip": "Build your site for deployment"
-            },
-            {
               "name": "🚀 Publish",
               "singleInstance": true,
               "command": "bash _helpers/publish.sh",
               "tooltip": "Publish to GitHub Pages"
+            },
+            {
+              "name": "🚧 Next",
+              "singleInstance": true,
+              "command": "bash _helpers/next.sh",
+              "tooltip": "Get a next step"
             }
           ],
           "defaultColor": "none",
