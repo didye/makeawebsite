@@ -32,7 +32,7 @@ First, use any framework or technology the user explicitly requests. Otherwise, 
 * Include a `launch.json` file that will enable the user to run the project in VS Code without further configuration. Document the exact VS Code workflow for the project. * Include a `launch.json` file that starts the site (for framework-based sites, the development server). Prefer opening the site in VS Code's embedded browser (Simple Browser or the Integrated Browser) instead of an external one. If that can't be configured reliably in `launch.json`, use `openExternally` and document in the README how to open the running site in the embedded browser, for example by running **Simple Browser: Show** from the Command Palette and entering the local address.
 * Ensure that code does not contain broken links or errors that will fire on first run. Links should be to pages or page sections that actually exist.
 
-Place the files in the current project root folder, but don't overwrite the contents of the `.github`, `.devcontainer` or `_helpers` folders.
+Place the files in the current project root folder, but don't overwrite the contents of the `.github`, `.devcontainer` or `_helpers` folders. If overwriting the `package.json` ensure that the `deploy` script and `gh-pages` dependencies remain intact.
 
 ## Project docs
 
