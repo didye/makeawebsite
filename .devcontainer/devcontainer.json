@@ -19,7 +19,7 @@
       "onAutoForward": "openPreview"
     }
   },
-  "updateContentCommand":"npm install",
+  "updateContentCommand":"npm install -g @github/copilot",
   "postAttachCommand": "bash _helpers/setup.sh",
   "customizations": {
     "vscode": {
