@@ -17,7 +17,7 @@ Choose an implementation suited to the site purpose:
 * Use meaningful but concise names for code components such as variables and functions.
 * Include any files necessary to build and run the site in a Codespace, such as package.json and config files for any frameworks used, if necessary for the implementation.
 * Keep the directory structure simple, with minimal nesting.
-* Website styles should use rainbow colors, with light-hearted, jokey content.
+* Website styles should use a variety of bright colors, with light-hearted, jokey content.
 * When images are used, prefer existing public domain or creative commons licensed options with attribution where necessary.
 * Include an MIT LICENSE file.
 * Include a `.gitignore` if appropriate.
