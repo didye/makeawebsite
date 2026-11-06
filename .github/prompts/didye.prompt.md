@@ -1,14 +1,6 @@
----
-description: "Generate a beginner-friendly web development starter website"
-agent: "agent"
-argument-hint: "Site theme"
----
-
 # Web development learner project creation
 
 Generate a beginner-friendly website using the implementation approach best suited to the site purpose. It may use plain HTML/CSS/JavaScript or a framework that builds static files. It will act as a starting point for someone learning web development skills – the implementation should be optimized for comprehension and extensibility by a beginner. 
-
-Use any site theme the user provides when running this prompt to shape the website content and folder name. If none is provided, choose a suitable idea.
 
 ## Target frameworks
 
