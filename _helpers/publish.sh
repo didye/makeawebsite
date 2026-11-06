@@ -23,6 +23,10 @@ if [ "$answer" != "${answer#[Yy]}" ] ; then
         else
           if [ -d "build" ]; then
           pubdir="build"
+          else
+            if [ -d "docs" ]; then
+            pubdir="docs"
+            fi
           fi
         fi
       fi
