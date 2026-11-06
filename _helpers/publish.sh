@@ -8,7 +8,8 @@ read answer
 
 if [ "$answer" != "${answer#[Yy]}" ] ; then 
   npm run build 
-  npm run deploy
+  # will update to guess the folder
+  gh-pages -d dist
   printf "\n🎉 Your site may take a few minutes to deploy fully – you'll find the address at your GitHub repo > Settings > Pages"
 else
     exit 1
