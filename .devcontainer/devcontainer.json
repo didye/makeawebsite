@@ -4,7 +4,10 @@
   "name": "Ubuntu",
   "image": "mcr.microsoft.com/devcontainers/base:noble",
   "features": {
-    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "latest",
+      "globalPkgs": "gh-pages"
+    },
     "ghcr.io/devcontainers/features/github-cli:1": {
       "version": "latest",
       "extensions": "github/gh-copilot"
@@ -17,6 +20,7 @@
     }
   },
   "updateContentCommand": "bash _helpers/setup.sh",
+  "postCreateCommand": "npm install",
   "waitFor": "updateContentCommand",
   "customizations": {
     "vscode": {
