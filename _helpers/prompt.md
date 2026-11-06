@@ -24,7 +24,7 @@ Choose an implementation suited to the site purpose:
 * Ensure that the site can run and open immediately in Codespaces using the embedded Simple Browser.
 * Ensure that code does not contain broken links or errors that will fire on first run. Links should be to pages or page sections that actually exist.
 
-Place the files in the current project root folder, but don't overwrite the contents of the `.devcontainer` or `_helpers` folders. If overwriting the `package.json` ensure that the `deploy` script and `gh-pages` dependencies remain intact.
+Place the files in the current project root folder, but don't overwrite the contents of the `.devcontainer` or `_helpers` folders.
 
 ## Project docs
 
