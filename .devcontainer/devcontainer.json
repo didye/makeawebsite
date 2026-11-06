@@ -19,6 +19,7 @@
       "onAutoForward": "openPreview"
     }
   },
+  "updateContentCommand":"npm install",
   "postAttachCommand": "bash _helpers/setup.sh",
   "customizations": {
     "vscode": {
