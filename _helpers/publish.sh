@@ -8,7 +8,7 @@ read answer
 
 pubdir=""
 if [ "$answer" != "${answer#[Yy]}" ] ; then 
-  npm run build || rsync -a ./ dist
+  npm run build || rsync -a ../ ../dist
   if [ -d "dist" ]; then
   pubdir="dist"
   else 
