@@ -33,8 +33,6 @@ if [ "$answer" != "${answer#[Yy]}" ] ; then
     fi
   fi
   if [ -n "$pubdir" ]; then
-    #!/usr/bin/env bash
-    ls
     npx --yes --package=gh-pages gh-pages -d "$pubdir"
     printf "\n🎉 Your site may take a few minutes to deploy fully – you'll find the address at your GitHub repo > Settings > Pages\n"
   else
