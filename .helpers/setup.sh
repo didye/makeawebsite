@@ -9,7 +9,7 @@ if [ "$answer" == "${answer#[Xx]}" ] ; then
     if [ ! -z "$answer" -a "$answer" != "" -a "$answer" != " " ]; then
         userinfo="The user chose the following theme: $answer"
     fi
-  prompt="$userinfo\n $(<_helpers/prompt.md)"
+  prompt="$userinfo\n $(<.helpers/prompt.md)"
   copilot --prompt "$prompt" --allow-all
   npm run start || npx --yes serve
 fi
