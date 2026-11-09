@@ -26,7 +26,7 @@ First, use any framework or technology the user explicitly requests. Otherwise, 
 * Include a `.gitignore` if appropriate.
 * Ensure that the site can run and open immediately in Codespaces using the embedded Simple Browser.
 * Ensure that code does not contain broken links or errors that will fire on first run. Links should be to pages or page sections that actually exist.
-* The website may be deployed to a subdirectory, so ensure all links and refs use relative URLs that will work both run in dev mode and when published through a GitHub Pages repo.
+* The website may be deployed to a subdirectory, so ensure all links and refs use URLs relative to "./" that will work both run in dev mode in a Codespace and when published to a GitHub Pages repo.
 
 Place the files in the current project root folder, but don't overwrite the contents of the `.devcontainer` or `_helpers` folders.
 
