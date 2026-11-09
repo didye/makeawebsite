@@ -40,7 +40,7 @@
             {
               "name": "🎡 Run",
               "singleInstance": true,
-              "command": "npm run start",
+              "command": "npm run start || npx --yes serve",
               "tooltip": "Build and run your site"
             },
             {
