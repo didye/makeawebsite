@@ -8,7 +8,7 @@ read answer
 
 pubdir=""
 if [ "$answer" != "${answer#[Yy]}" ] ; then 
-  npm run build || rsync -a --exclude='.devcontainer/' --exclude='.helpers/' --exclude='dist/' ../ ../dist/
+  npm run build 2>/dev/null || rsync -a --exclude='.devcontainer/' --exclude='.helpers/' --exclude='dist/' ./ ./dist/ ; npm init -y
   if [ -d "dist" ]; then
   pubdir="dist"
   else 
@@ -40,7 +40,7 @@ if [ "$answer" != "${answer#[Yy]}" ] ; then
       ghio=$(echo "${repo[0]}.github.io")
       user=$( echo "$ghio" | tr '[:upper:]' '[:lower:]' )
       address="https://$user/${repo[1]}"
-      printf "\n🎉 Your site may take a few minutes to deploy fully\n🏡 It's address will be something like $address \n⚙️ You'll find more details at your GitHub repo > Settings > Pages\n"
+      printf "\n🎉 Your site may take a few minutes to deploy fully\n🏡 It's address will be something like this depending on your repo name: $address \n⚙️ You'll find more details at your GitHub repo > Settings > Pages\n"
       exit 0
     else
       printf "\n🙈 Oops – something went wrong, maybe check your repo is set up?\n"
