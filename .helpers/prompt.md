@@ -24,7 +24,7 @@ First, use any framework or technology the user explicitly requests. Otherwise, 
 * When images are used, prefer existing public domain or creative commons licensed options with attribution where necessary.
 * Include an MIT LICENSE file.
 * Include a `.gitignore` if appropriate.
-* Ensure that the site can run and open immediately in Codespaces using the embedded Simple Browser.
+* Ensure that the site can run and open immediately from Codespaces.
 * Ensure that code does not contain broken links or errors that will fire on first run. Links should be to pages or page sections that actually exist.
 * The website may be deployed to a subdirectory, so ensure all links and refs use URLs relative to "./" that will work both run in dev mode in a Codespace and when published to a GitHub Pages repo.
 
@@ -36,7 +36,7 @@ Place the files in the current project root folder, but don't overwrite the cont
 
 * Introduction to the project with description of what it does and how it works, including an overview of the user experience it creates.
 * List of project folders and files with one line explanations of each.
-* Required system dependencies such as node, npm.
+* Required system dependencies such as node.
 * Steps required to prepare the environment and run the site, along with a list of any required IDE extensions.
   * For framework-based projects, include the scripts and VS Code configuration needed to build and run the site either in GitHub Codespaces or locally in VS Code.
   * Include links to docs for frameworks used in the project.
