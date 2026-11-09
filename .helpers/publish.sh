@@ -34,8 +34,19 @@ if [ "$answer" != "${answer#[Yy]}" ] ; then
   fi
   if [ -n "$pubdir" ]; then
     npx --yes --package=gh-pages gh-pages -d "$pubdir"
-    printf "\n🎉 Your site may take a few minutes to deploy fully – you'll find the address at your GitHub repo > Settings > Pages\n"
-  else
+    # read success or fail
+    if [ $? -eq 0 ]; then
+      IFS='/' read -ra repo <<< "$GITHUB_REPOSITORY"
+      ghio=$(echo "${repo[0]}.github.io")
+      user=$( echo "$ghio" | tr '[:upper:]' '[:lower:]' )
+      address="https://$user/${repo[1]}"
+      printf "\n🎉 Your site may take a few minutes to deploy fully\n🏡 It's address will be something like $address \n⚙️ You'll find more details at your GitHub repo > Settings > Pages\n"
+      exit 0
+    else
+      printf "\n🙈 Oops – something went wrong, maybe check your repo is set up?\n"
+      exit 1
+    fi
+else
     exit 1
   fi
 else
