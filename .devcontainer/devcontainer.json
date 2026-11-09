@@ -39,11 +39,10 @@
         "actionButtons": {
           "commands": [
             {
-              "name": "🌈 Prettify",
+              "name": "🎡 Run",
               "singleInstance": true,
-              "useVsCodeApi": true,
-              "command": "editor.action.formatDocument",
-              "tooltip": "Tidy up your code"
+              "command": "npm run start",
+              "tooltip": "Build and run your site"
             },
             {
               "name": "🔗 Share",
